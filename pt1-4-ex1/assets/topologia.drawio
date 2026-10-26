@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2026-10-26T18:00:00.000Z" agent="Mozilla/5.0" version="24.0.0">
+  <diagram id="pt1-4-ex1" name="Exercici 1 - Topologia AWS">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;AWS Topologia - Exercici 1 (Laia Bola Simó - INS Provençana)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#232F3E;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="880" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud" value="AWS Cloud: us-east-1 (N. Virginia)" style="swimlane;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=#F8FAFC;strokeColor=#0073BB;fontColor=#232F3E;startSize=30;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="880" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="igw" value="&lt;b&gt;Internet Gateway&lt;/b&gt;&lt;br&gt;Default IGW&lt;br&gt;&lt;i&gt;0.0.0.0/0&lt;/i&gt;" style="shape=mxgraph.aws4.internet_gateway;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#2E73B8;strokeColor=none;fontColor=#232F3E;fontSize=11;" vertex="1" parent="cloud">
+          <mxGeometry x="60" y="60" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc" value="Default VPC: 172.31.0.0/16" style="swimlane;whiteSpace=wrap;html=1;fillColor=#F2F9F2;strokeColor=#248814;fontColor=#248814;startSize=30;fontStyle=1;fontSize=12;" vertex="1" parent="cloud">
+          <mxGeometry x="40" y="160" width="800" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="subnet" value="Default Subnet: us-east-1c (172.31.16.0/20)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#EBF4FC;strokeColor=#0073BB;fontColor=#0073BB;startSize=26;fontStyle=1;fontSize=11;" vertex="1" parent="vpc">
+          <mxGeometry x="30" y="50" width="740" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_1" value="&lt;b&gt;EC2: pt1-4-ex1-instance-1&lt;/b&gt;&lt;br&gt;ID: i-0c8d75fe86db4fdfe&lt;br&gt;Type: t3.micro&lt;br&gt;OS: Amazon Linux 2023&lt;br&gt;Public IP: 3.95.181.224&lt;br&gt;Private IP: 172.31.21.129" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#ED7100;strokeWidth=2;fontSize=11;align=left;spacingLeft=15;" vertex="1" parent="subnet">
+          <mxGeometry x="40" y="50" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2_2" value="&lt;b&gt;EC2: pt1-4-ex1-instance-2&lt;/b&gt;&lt;br&gt;ID: i-08c32ece1a0402269&lt;br&gt;Type: t3.micro&lt;br&gt;OS: Amazon Linux 2023&lt;br&gt;Public IP: 34.228.65.32&lt;br&gt;Private IP: 172.31.25.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#ED7100;strokeWidth=2;fontSize=11;align=left;spacingLeft=15;" vertex="1" parent="subnet">
+          <mxGeometry x="390" y="50" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0073BB;strokeWidth=2;" edge="1" source="igw" target="vpc" parent="cloud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
