@@ -60,6 +60,7 @@ Comprovem matemàticament que els rangs no tenen cap col·lisió:
 Totes les subxarxes estan contingudes estrictament dins del rang principal `10.0.0.0/16` i són completament disjuntes entre si.
 
 ---
+<img width="1657" height="506" alt="image" src="https://github.com/user-attachments/assets/ce4ebe75-7c73-4cff-84b1-dc2e860125c3" />
 
 ## 3. Diagrama de la Topologia de Xarxa
 
